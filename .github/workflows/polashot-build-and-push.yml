@@ -39,13 +39,6 @@ jobs:
     - name: Set up Google Cloud SDK
       uses: google-github-actions/setup-gcloud@v1
 
-    - name: Login to Artifact Registry
-      uses: docker/login-action@v1
-      with:
-        registry: us-docker.pkg.dev
-        username: oauth2accesstoken
-        password: ${{ steps.auth.outputs.access_token }}
-
     - name: Delete huge unnecessary tools folder
       run: RM -rf /opt/hostedtoolcache
 
