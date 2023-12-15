@@ -47,7 +47,7 @@ jobs:
         password: ${{ steps.auth.outputs.access_token }}
 
     - name: Delete huge unnecessary tools folder
-      ruN: RM -rf /opt/hostedtoolcache
+      run: RM -rf /opt/hostedtoolcache
 
     - name: Build and push Docker image
       run: |
