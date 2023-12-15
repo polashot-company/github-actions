@@ -40,7 +40,7 @@ jobs:
       uses: google-github-actions/setup-gcloud@v1
 
     - name: Delete huge unnecessary tools folder
-      run: RM -rf /opt/hostedtoolcache
+      run: rm -rf /opt/hostedtoolcache
 
     - name: Build and push Docker image
       run: |
